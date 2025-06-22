@@ -15,7 +15,7 @@ package main
 
 import (
     "fmt"
-    "github.com/yourgithub/winfilepicker"
+    "github.com/zyoung11/GO-WinFilePicker"
 )
 
 func main() {
