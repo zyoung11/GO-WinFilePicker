@@ -294,21 +294,21 @@ func (obj *IShellItem) Release() uint32 {
 	return uint32(ret)
 }
 
-func main() {
+// func main() {
 
-	// Select File Example
-	file, err := SelectFile()
-	if err != nil {
-		fmt.Println("File selection error:", err)
-	} else {
-		fmt.Println("Selected:", file)
-	}
+// 	// Select File Example
+// 	file, err := SelectFile()
+// 	if err != nil {
+// 		fmt.Println("File selection error:", err)
+// 	} else {
+// 		fmt.Println("Selected:", file)
+// 	}
 
-	// Select Folder Example
-	folder, err := SelectFolder()
-	if err != nil {
-		fmt.Println("Folder selection error:", err)
-	} else {
-		fmt.Println("Selected:", folder)
-	}
-}
+// 	// Select Folder Example
+// 	folder, err := SelectFolder()
+// 	if err != nil {
+// 		fmt.Println("Folder selection error:", err)
+// 	} else {
+// 		fmt.Println("Selected:", folder)
+// 	}
+// }
