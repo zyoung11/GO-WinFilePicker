@@ -1,6 +1,6 @@
 # Windows Modern File and Folder Picker for Go
 
-**winfilepicker** is a lightweight Go library that provides modern, native file and folder selection dialogs for Windows applications. This package uses Windows COM APIs through Golang's syscall to provide native dialogs without external dependencies.
+**GO-WinFilePicker** is a lightweight Go library that provides modern, native file and folder selection dialogs for Windows applications. This package uses Windows COM APIs through Golang's syscall to provide native dialogs without external dependencies.
 
 ## Installation
 
