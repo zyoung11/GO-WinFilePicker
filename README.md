@@ -2,6 +2,8 @@
 
 **GO-WinFilePicker** is a lightweight Go library that provides modern, native file and folder selection dialogs for Windows applications. This package uses Windows COM APIs through Golang's syscall to provide native dialogs without external dependencies.
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/zyoung11/GO-WinFilePicker.svg)](https://pkg.go.dev/github.com/zyoung11/GO-WinFilePicker)
+
 ## Installation
 
 ```bash
