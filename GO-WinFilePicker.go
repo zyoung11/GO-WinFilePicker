@@ -1,4 +1,4 @@
-package main
+package winfilepicker
 
 import (
 	"fmt"
