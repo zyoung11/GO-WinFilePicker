@@ -118,7 +118,7 @@ func FAILED(hr uintptr) bool {
 	return int32(hr) < 0
 }
 
-func SelectFile() (string, error) {
+func SelectFile(title string) (string, error) {
 	hr, _, _ := syscall.SyscallN(coInitializeEx.Addr(), 0, COINIT_APARTMENTTHREADED)
 	if FAILED(hr) {
 		return "", fmt.Errorf("COM initialization failed")
@@ -148,7 +148,6 @@ func SelectFile() (string, error) {
 		return "", fmt.Errorf("failed to set options")
 	}
 
-	title := "Select File"
 	titlePtr, err := syscall.UTF16PtrFromString(title)
 	if err != nil {
 		return "", fmt.Errorf("failed to convert title: %v", err)
@@ -198,7 +197,7 @@ func SelectFile() (string, error) {
 	return UTF16PtrToString(pszPath), nil
 }
 
-func SelectFolder() (string, error) {
+func SelectFolder(title string) (string, error) {
 	hr, _, _ := syscall.SyscallN(coInitializeEx.Addr(), 0, COINIT_APARTMENTTHREADED)
 	if FAILED(hr) {
 		return "", fmt.Errorf("COM initialization failed")
@@ -228,7 +227,6 @@ func SelectFolder() (string, error) {
 		return "", fmt.Errorf("failed to set options")
 	}
 
-	title := "Select folder"
 	titlePtr, err := syscall.UTF16PtrFromString(title)
 	if err != nil {
 		return "", fmt.Errorf("failed to convert title:%v", err)
@@ -297,7 +295,7 @@ func (obj *IShellItem) Release() uint32 {
 // func main() {
 
 // 	// Select File Example
-// 	file, err := SelectFile()
+// 	file, err := SelectFile("SelectFile")
 // 	if err != nil {
 // 		fmt.Println("File selection error:", err)
 // 	} else {
@@ -305,7 +303,7 @@ func (obj *IShellItem) Release() uint32 {
 // 	}
 
 // 	// Select Folder Example
-// 	folder, err := SelectFolder()
+// 	folder, err := SelectFolder("SelectFolder")
 // 	if err != nil {
 // 		fmt.Println("Folder selection error:", err)
 // 	} else {

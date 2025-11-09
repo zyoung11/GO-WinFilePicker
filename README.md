@@ -23,7 +23,7 @@ import (
 func main() {
 
 	// Select File Example
-	file, err := winfilepicker.SelectFile()
+	file, err := winfilepicker.SelectFile("Please select a file")
 	if err != nil {
 		fmt.Println("File selection error:", err)
 	} else {
@@ -31,7 +31,7 @@ func main() {
 	}
 
 	// Select Folder Example
-	folder, err := winfilepicker.SelectFolder()
+	folder, err := winfilepicker.SelectFolder("Please select a folder")
 	if err != nil {
 		fmt.Println("Folder selection error:", err)
 	} else {
