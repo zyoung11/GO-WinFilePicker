@@ -16,14 +16,15 @@ go get github.com/zyoung11/GO-WinFilePicker
 package main
 
 import (
-    "fmt"
-    "github.com/zyoung11/GO-WinFilePicker"
+	"fmt"
+
+	winfilepicker "github.com/zyoung11/GO-WinFilePicker"
 )
 
 func main() {
 
 	// 1. Single file selection
-	file, err := SelectFile("Please select an image", "jpg", "png", "gif")
+	file, err := winfilepicker.SelectFile("Please select an image", "jpg", "png", "gif")
 	if err != nil {
 		fmt.Println("[Single file] Cancelled or error:", err)
 	} else {
@@ -31,7 +32,7 @@ func main() {
 	}
 
 	// 2. Multiple file selection
-	files, err := SelectFiles("Please select multiple images", "jpg", "png", "gif")
+	files, err := winfilepicker.SelectFiles("Please select multiple images", "jpg", "png", "gif")
 	if err != nil {
 		fmt.Println("[Multiple files] Cancelled or error:", err)
 	} else {
@@ -42,7 +43,7 @@ func main() {
 	}
 
 	// 3. Single folder selection
-	folder, err := SelectFolder("Please select a folder")
+	folder, err := winfilepicker.SelectFolder("Please select a folder")
 	if err != nil {
 		fmt.Println("[Single folder] Cancelled or error:", err)
 	} else {
@@ -50,7 +51,7 @@ func main() {
 	}
 
 	// 4. Multiple folder selection
-	folders, err := SelectFolders("Please select multiple folders")
+	folders, err := winfilepicker.SelectFolders("Please select multiple folders")
 	if err != nil {
 		fmt.Println("[Multiple folders] Cancelled or error:", err)
 	} else {
@@ -60,6 +61,7 @@ func main() {
 		}
 	}
 }
+
 
 ```
 
